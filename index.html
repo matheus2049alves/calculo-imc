@@ -13,22 +13,33 @@
 <body>
   <div class="container">
     <main class="card">
-      <h1>Cálculo de IMC</h1>
+      <h1 class="title">Cálculo de IMC</h1>
       <form >
         <div class="form-wrapper">
           <div class="input-wrapper">
             <label for="width">Peso (kg)</label>
-            <input type="number" id="width">
+            <input type="number" id="width" placeholder="60">
             </div>
           <div class="input-wrapper">
             <label for="heigth">Altura (m)</label>
-            <input type="number" id="width">
+            <input type="number" id="width" placeholder="170">
           </div>
         </div>
-        <button> Calcular IMC</button>
-        <img src="images/arrow-up-right.svg" alt="seta apontado para a direita">
+        <button> 
+          Calcular IMC
+          <img src="images/arrow-up-right.svg" alt="seta apontado para a direita">
+        </button>
       </form>
     </main>
+  </div>
+  <div class="modal-wrapper ">
+    <div class="modal card">
+      <h2 class="title">Seu IMC é de 28</h2>
+      <button class="close">
+         <img src="images/close.svg" alt="x de fechar pop-up">
+      </button>
+     
+    </div>
   </div>
 </body>
 </html>
