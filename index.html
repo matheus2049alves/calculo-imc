@@ -8,24 +8,27 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
 </head>
 <body>
+  <div class="alert-error ">
+    Digite somente números
+  </div>
   <div class="container">
     <main class="card">
       <h1 class="title">Cálculo de IMC</h1>
-      <form >
+      <form>
         <div class="form-wrapper">
           <div class="input-wrapper">
             <label for="width">Peso (kg)</label>
-            <input type="number" id="width" placeholder="60">
+            <input type="text" id="width" placeholder="60" >
             </div>
           <div class="input-wrapper">
             <label for="heigth">Altura (m)</label>
-            <input type="number" id="width" placeholder="170">
+            <input type="text" id="heigth" placeholder="1.70">
           </div>
         </div>
-        <button> 
+        <button type="submit"> 
           Calcular IMC
           <img src="images/arrow-up-right.svg" alt="seta apontado para a direita">
         </button>

@@ -134,4 +134,29 @@ form button:hover {
 .modal-wrapper.open {
   opacity: 1;
   visibility: visible;
+
+}
+
+/* alert-error*/
+
+.alert-error.open{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+.alert-error{
+  background: #F03E3E;
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+  color: #FFF;
+  font-weight: 700;
+  padding: .8rem 0 ;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transform: translateY(-30px);
+  transition: transform .7s;
 }
