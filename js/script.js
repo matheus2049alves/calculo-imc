@@ -1,8 +1,10 @@
+import {Modal} from './modal.js'
+import { alerterror } from './alert-error.js'
+
 const form = document.querySelector('Form')
 const inputHeigth = document.querySelector('#heigth')
 const inputWidth = document.querySelector('#width')
-const btnClose = document.querySelector(".close")
-
+ 
 form.onsubmit = function(event) {
   event.preventDefault();
 
@@ -11,21 +13,20 @@ form.onsubmit = function(event) {
   const imcResult = imc(Heigth,width)
   
   if (!isNaN(imcResult)) {
-    document.querySelector('.modal-wrapper').classList.add('open')
-    document.querySelector('.modal-wrapper h2').innerText = `Seu IMC é de ${imcResult}`
+    Modal.open();
+    Modal.Message.innerText = `Seu IMC é de ${imcResult}`
   }else{
-    document.querySelector('.alert-error').classList.add('open')
+    alerterror.open()
     setTimeout(()=> {
-      document.querySelector('.alert-error').classList.remove('open')
+      alerterror.close()
     },2000)
   }
 }
 
+
+//funções
 function imc(Heigth, width){
   return (width/(Heigth * Heigth)).toFixed(2)
 }
 
-btnClose.addEventListener('click', function(){
-  document.querySelector('.modal-wrapper').classList.remove('open')
-})
 
